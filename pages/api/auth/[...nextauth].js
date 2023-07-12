@@ -5,6 +5,7 @@ import clientPromise from '../../../lib/mongodb'
 import { MongoDBAdapter } from '@next-auth/mongodb-adapter'
 
 export const authOp = {
+  secret: process.env.SECRET,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_FRONT_ID,
